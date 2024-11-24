@@ -1,0 +1,21 @@
+git status
+#shows the Untracked files
+
+---------------------------------------------
+git add Hello.py
+#Hello.py is he newly file added file
+
+git add .
+# to add all files to staging
+
+---------------------------------------------
+git commit -m "Commit Comment"
+
+---------------------------------------------
+git push origin AnnPython
+
+---------------------------------------------
+
+
+
+
