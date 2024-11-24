@@ -1,0 +1,67 @@
+// First
+integer_list = []
+i = 1
+while i <= 4:
+    try:
+        in_string = input()
+        i = i + 1
+        in_num = int(in_string)
+        integer_list.append(in_num)
+    except ValueError:
+        print("Entered number is not valid")
+final = (integer_list[0] ** integer_list[1]) + (integer_list[2] ** integer_list[3])
+print(final)
+
+
+
+
+
+// Second
+import sys
+import xml.etree.ElementTree as etree
+
+score = 0
+
+def get_attr_number(element):
+    global score
+    score += len(element.attrib)
+    for child in element:
+        get_attr_number(child)
+    return score
+
+
+if __name__ == '__main__':
+    sys.stdin.readline()
+    xml = sys.stdin.read()
+    tree = etree.ElementTree(etree.fromstring(xml))
+    root = tree.getroot()
+    print(get_attr_number(root))
+	
+	
+	
+	W61505589
+	
+if __name__ == '__main__':
+    N = int(input())
+    integer_list = []
+    command_list = []
+    for i in range(N):
+        command_in = input()
+        command_list = [command for command in command_in.split( )]
+        if command_list[0] == "insert":
+            integer_list.insert(int(command_list[1]), int(command_list[2]))
+        elif command_list[0] == "print":
+            print(integer_list)
+        elif command_list[0] == "remove":
+            integer_list.remove(int(command_list[1]))
+        elif command_list[0] == "sort":
+            integer_list.sort()
+        elif command_list[0] == "pop":
+            integer_list.pop()
+        elif command_list[0] == "append":
+            integer_list.append(int(command_list[1]))
+        elif command_list[0] == "reverse":
+            integer_list.reverse()
+	
+	
+	
